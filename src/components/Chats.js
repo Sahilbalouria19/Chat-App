@@ -52,7 +52,7 @@ const Chats = () =>{
                 .then((avatar) =>{
                     formdata.append('avatar', avatar, avatar.name);
                     
-                    axios.post('https://api.chatengine.io/users/',
+                    axios.post("https://api.chatengine.io/users/",
                         formdata,
                         {
                             headers : { "private-key" :process.env.REACT_APP_CHAT_ENGINE_KEY }
