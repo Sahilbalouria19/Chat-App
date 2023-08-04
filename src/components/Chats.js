@@ -8,7 +8,7 @@ import { useAuth } from '../contexts/AuthContext'
 
 
 const Chats = () =>{
-
+    
     const history = useHistory();
     const { user } = useAuth();
     const [loading, setLoading] = useState(true);
@@ -32,7 +32,7 @@ const Chats = () =>{
             return;
         }
 
-        axios.get('https://api.chatengine.io/users/me', {
+        axios.get('https://api.chatengine.io/users/me/', {
             headers: {
                 "project-id": "fbb55cbc-c335-4961-a69b-f47061ce68f2",
                 "user-name":user.email,
